@@ -90,7 +90,7 @@ const Output = ({ data, style, classNames, config, renderers }) => {
           return '';
         }
         Renderer = renderers[block.type.toLowerCase()];
-        return <Renderer key={ i } style={ style[block.type.toLowerCase()] || {}} config={ config[block.type.toLowerCase()] || {}} classNames={ classNames[block.type.toLowerCase()] || {}} />;
+        return <Renderer key={ i } data={ block.data } style={ style[block.type.toLowerCase()] || {}} config={ config[block.type.toLowerCase()] || {}} classNames={ classNames[block.type.toLowerCase()] || {}} />;
     }
   });
 };
