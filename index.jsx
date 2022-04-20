@@ -86,6 +86,7 @@ const Output = ({ data, style, classNames, config, renderers }) => {
         return <Renderer key={ i } style={ style.delimiter || {}} config={ config.delimiter || {}} classNames={ classNames.delimiter || {}} />;
 
       default:
+        console.log(block);
         if (!renderers[block.type.toLowerCase()]) {
           return '';
         }
