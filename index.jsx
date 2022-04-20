@@ -85,7 +85,12 @@ const Output = ({ data, style, classNames, config, renderers }) => {
         Renderer = renderers.delimiter || DelimiterOutput;
         return <Renderer key={ i } style={ style.delimiter || {}} config={ config.delimiter || {}} classNames={ classNames.delimiter || {}} />;
 
-      default: return '';
+      default:
+        if (!renderers[block.type.toLowerCase()]) {
+          return '';
+        }
+        Renderer = renderers[block.type.toLowerCase()];
+        return <Renderer key={ i } style={ style[block.type.toLowerCase()] || {}} config={ config[block.type.toLowerCase()] || {}} classNames={ classNames[block.type.toLowerCase()] || {}} />;
     }
   });
 };
