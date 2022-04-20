@@ -1,3 +1,6 @@
+> Note that this is a fork of [EditorJS-React Renderer (ERR)](https://github.com/dev-juju/EditorJS-React-Renderer)
+> We develop only for internal use on this tool. Please open issues on the original repository.
+
 # [EditorJS-React Renderer (ERR)](https://err.bomdisoft.com/)
 
 [View live example](https://err.bomdisoft.com/)
